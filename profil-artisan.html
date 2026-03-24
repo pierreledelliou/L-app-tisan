@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Artisan - L'App-tisan</title>
+    <style>
+        body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; background-color: #e2e8f0; margin: 0; padding: 0; display: flex; justify-content: center; }
+        .app-container { background-color: #ffffff; width: 100%; max-width: 414px; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); position: relative; padding-bottom: 90px; }
+        
+        .header { background-color: #1a365d; height: 120px; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; text-align: center; color: white; padding-top: 20px; box-sizing: border-box; }
+        .header h2 { margin: 0; font-size: 1.2em; letter-spacing: 1px; }
+
+        .pic-container { text-align: center; margin-top: -50px; }
+        .profile-pic { width: 110px; height: 110px; border-radius: 50%; border: 5px solid white; background-color: #cbd5e0; object-fit: cover; }
+
+        .info { text-align: center; padding: 15px 20px 5px; }
+        .name { font-size: 1.6em; font-weight: bold; color: #2d3748; margin-bottom: 5px; }
+        .job { color: #e67e22; font-weight: bold; font-size: 1.1em; margin-bottom: 8px; }
+        .location { color: #718096; font-size: 0.9em; }
+
+        .stats { display: flex; justify-content: space-around; background-color: #f8fafc; margin: 20px; padding: 15px; border-radius: 15px; border: 1px solid #e2e8f0; }
+        .stat-box { text-align: center; }
+        .stat-number { font-weight: bold; font-size: 1.2em; color: #1a365d; margin-bottom: 3px; }
+        .stat-label { font-size: 0.8em; color: #64748b; text-transform: uppercase; }
+
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 0 20px; margin-bottom: 20px; }
+        .tag { background-color: #ebf4ff; color: #3182ce; padding: 6px 12px; border-radius: 20px; font-size: 0.85em; font-weight: 500; }
+
+        .description { padding: 0 25px; color: #4a5568; font-size: 0.95em; line-height: 1.6; text-align: justify; }
+        .description h3 { color: #2d3748; font-size: 1.1em; margin-bottom: 10px; }
+
+        .action-bar { position: fixed; bottom: 0; width: 100%; max-width: 414px; background-color: white; padding: 15px 20px; box-sizing: border-box; box-shadow: 0 -4px 15px rgba(0,0,0,0.05); display: flex; gap: 15px; border-top-left-radius: 20px; border-top-right-radius: 20px; }
+        .btn { flex: 1; padding: 14px; border-radius: 12px; text-align: center; font-weight: bold; text-decoration: none; font-size: 1em; transition: opacity 0.2s; }
+        .btn-call { background-color: #edf2f7; color: #1a365d; flex: 0.4; }
+        .btn-quote { background-color: #e67e22; color: white; flex: 1; }
+        
+        /* Bouton retour */
+        .back-home { position: absolute; top: 15px; left: 15px; color: white; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <div class="header">
+            <a href="index.html" class="back-home">← Retour</a>
+            <h2>L'App-tisan 🛠️</h2>
+        </div>
+
+        <div class="pic-container">
+            <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=256&q=80" alt="Photo de l'artisan" class="profile-pic">
+        </div>
+
+        <div class="info">
+            <div class="name">Marc Leroy</div>
+            <div class="job">Plombier Chauffagiste</div>
+            <div class="location">📍 Brest et alentours</div>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">⭐ 4.8/5</div>
+                <div class="stat-label">42 avis</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">✅ RGE</div>
+                <div class="stat-label">Certifié</div>
+            </div>
+        </div>
+
+        <div class="tags">
+            <span class="tag">Dépannage Urgence</span>
+            <span class="tag">Sanitaire</span>
+            <span class="tag">Pompe à Chaleur</span>
+        </div>
+
+        <div class="description">
+            <h3>À propos de moi</h3>
+            <p>Artisan plombier chauffagiste avec plus de 10 ans d'expérience sur le secteur finistérien. J'interviens rapidement pour vos urgences et je vous accompagne de A à Z dans vos projets de rénovation énergétique.</p>
+        </div>
+
+        <div class="action-bar">
+            <a href="#" class="btn btn-call">📞 Appel</a>
+            <a href="#" class="btn btn-quote">✉️ Demander un devis</a>
+        </div>
+    </div>
+
+</body>
+</html>
