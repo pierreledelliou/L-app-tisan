@@ -7,8 +7,7 @@
     <style>
         body { font-family: 'Segoe UI', Roboto, Arial, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f8fafc; }
         header { background-color: white; padding: 15px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
-        .logo { font-size: 1.5em; font-weight: bold; color: #1a365d; text-decoration: none; }
-        .logo span { color: #e67e22; }
+        .logo img { height: 50px; vertical-align: middle; }
 
         .hero-partner { background-color: #1a365d; color: white; padding: 60px 20px; text-align: center; }
         .hero-partner h1 { margin-top: 0; font-size: 2.5em; }
@@ -19,9 +18,22 @@
         .box h2 { color: #e67e22; margin-top: 0; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
         .box ul { list-style-type: none; padding: 0; }
         .box li { margin-bottom: 15px; padding-left: 30px; position: relative; line-height: 1.5; }
-        
         .box-avantages li::before { content: '🚀'; position: absolute; left: 0; }
         .box-conditions li::before { content: '📋'; position: absolute; left: 0; }
+
+        /* NOUVEAU : Section Tarifs */
+        .pricing-section { text-align: center; margin: 60px 20px; }
+        .pricing-section h2 { color: #1a365d; font-size: 2em; margin-bottom: 30px; }
+        .pricing-cards { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; max-width: 900px; margin: 0 auto; }
+        .price-card { background: white; padding: 40px 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex: 1; min-width: 280px; border: 2px solid transparent; }
+        .price-card.premium { border-color: #e67e22; position: relative; transform: scale(1.05); box-shadow: 0 10px 25px rgba(230, 126, 34, 0.15); }
+        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #e67e22; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9em; }
+        .price-title { font-size: 1.5em; color: #1a365d; margin-bottom: 15px; font-weight: bold; }
+        .price-amount { font-size: 2.5em; color: #2d3748; font-weight: bold; margin-bottom: 20px; }
+        .price-amount span { font-size: 0.4em; color: #718096; font-weight: normal; }
+        .price-features { list-style: none; padding: 0; text-align: left; margin-bottom: 30px; }
+        .price-features li { padding: 10px 0; border-bottom: 1px solid #edf2f7; color: #4a5568; }
+        .price-features li::before { content: '✓'; color: #48bb78; font-weight: bold; margin-right: 10px; }
 
         .cta-section { text-align: center; margin: 50px 20px; }
         .btn-register { background-color: #e67e22; color: white; text-decoration: none; padding: 18px 40px; border-radius: 40px; font-size: 1.2em; font-weight: bold; display: inline-block; transition: 0.2s; box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3); }
@@ -34,7 +46,7 @@
 <body>
 
     <header>
-        <a href="index.html" class="logo">L'App-<span>tisan</span> 🛠️</a>
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo L'App-tisan"></a>
     </header>
 
     <div class="hero-partner">
@@ -49,23 +61,47 @@
                 <li><strong>Gagnez du temps :</strong> Fini la prospection, les clients viennent à vous.</li>
                 <li><strong>Sécurisez vos revenus :</strong> Acomptes gérés par la plateforme.</li>
                 <li><strong>Visibilité locale :</strong> Une page de profil dédiée qui met en valeur votre savoir-faire.</li>
-                <li><strong>Gestion simplifiée :</strong> Éditez vos devis depuis l'application.</li>
             </ul>
         </div>
-
         <div class="box box-conditions">
             <h2>Nos conditions d'accès</h2>
             <ul>
                 <li><strong>Immatriculation :</strong> Avoir un numéro de SIRET valide.</li>
                 <li><strong>Assurances :</strong> Posséder une garantie Décennale à jour.</li>
-                <li><strong>Transparence :</strong> S'engager à fournir des devis clairs.</li>
                 <li><strong>Qualité :</strong> Maintenir une note moyenne supérieure à 4/5.</li>
             </ul>
         </div>
     </div>
 
+    <div class="pricing-section">
+        <h2>Un modèle transparent et sans surprise</h2>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <div class="price-title">Artisan Standard</div>
+                <div class="price-amount">0€ <span>/mois</span></div>
+                <ul class="price-features">
+                    <li>Création de votre profil</li>
+                    <li>Réception de demandes de devis</li>
+                    <li>Messagerie client intégrée</li>
+                    <li>Commission de 10% par chantier gagné</li>
+                </ul>
+            </div>
+            <div class="price-card premium">
+                <div class="badge">Le plus choisi</div>
+                <div class="price-title">Artisan Premium</div>
+                <div class="price-amount">29€ <span>/mois</span></div>
+                <ul class="price-features">
+                    <li>Création de votre profil mis en avant</li>
+                    <li>Réception de demandes de devis prioritaires</li>
+                    <li>Label "Recommandé par L'App-tisan"</li>
+                    <li>Commission réduite à 5% par chantier gagné</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <div class="cta-section">
-        <a href="TON_LIEN_ICI" target="_blank" class="btn-register">Je dépose ma candidature</a>
+        <a href="TON_LIEN_GOOGLE_FORMS_ICI" target="_blank" class="btn-register">Je dépose ma candidature</a>
     </div>
 
     <a href="index.html" class="back-link">← Retour à l'accueil</a>
