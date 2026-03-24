@@ -10,9 +10,9 @@
         
         /* En-tête */
         header { background-color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
-        .logo { font-size: 1.5em; font-weight: bold; color: #1a365d; text-decoration: none; }
-        .logo span { color: #e67e22; }
+        .logo img { height: 50px; vertical-align: middle; }
         .nav-links a { margin-left: 20px; text-decoration: none; color: #4a5568; font-weight: 500; }
+        .nav-links a:hover { color: #e67e22; }
         .btn-login { background-color: #1a365d; color: white !important; padding: 8px 16px; border-radius: 8px; transition: 0.2s; }
         .btn-login:hover { background-color: #2b6cb0; }
 
@@ -43,7 +43,12 @@
         .step-number { background-color: #e67e22; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; font-size: 1.5em; font-weight: bold; margin: 0 auto 15px; }
         .step h4 { color: #2d3748; font-size: 1.2em; margin-bottom: 10px; }
 
-        footer { background-color: #2d3748; color: white; text-align: center; padding: 30px 20px; }
+        /* Pied de page amélioré */
+        footer { background-color: #2d3748; color: white; text-align: center; padding: 40px 20px; }
+        .footer-links { margin-bottom: 20px; }
+        .footer-links a { color: #a0aec0; text-decoration: none; margin: 0 15px; font-size: 0.95em; transition: color 0.2s; }
+        .footer-links a:hover { color: white; }
+        .footer-text { margin: 5px 0; font-size: 0.9em; color: #718096; }
 
         @media (max-width: 768px) {
             .search-box { border-radius: 15px; padding: 15px; }
@@ -51,14 +56,16 @@
             .search-input { border-bottom: 1px solid #e2e8f0; margin-bottom: 10px; width: 100%; }
             .btn-search { width: 100%; border-radius: 10px; }
             .nav-links { display: none; }
+            .footer-links a { display: block; margin: 10px 0; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo"><img src="logo.png" alt="Logo L'App-tisan" style="height: 50px;"></a>
+        <a href="index.html" class="logo"><img src="logo.jpg" alt="Logo L'App-tisan"></a>
         <nav class="nav-links">
+            <a href="a-propos.html">Le Projet</a>
             <a href="partenaire.html">Devenir partenaire</a>
             <a href="#comment-ca-marche">Comment ça marche ?</a>
             <a href="#" class="btn-login">Connexion</a>
@@ -116,7 +123,12 @@
     </section>
 
     <footer>
-        <p>© 2026 L'App-tisan. La connexion artisanale en Bretagne.</p>
+        <div class="footer-links">
+            <a href="a-propos.html">L'équipe & Le Projet</a>
+            <a href="partenaire.html">Espace Artisan</a>
+            <a href="mentions-legales.html">Mentions Légales</a>
+        </div>
+        <p class="footer-text">© 2026 L'App-tisan. La connexion artisanale en Bretagne.</p>
     </footer>
 
 </body>
